@@ -44,7 +44,7 @@ if uploaded_file:
             fig, ax = plt.subplots(figsize=(12, 8))
             max_value = max(max(actual_values), max(target_values))
             total_stages = len(stages)
-            colors = ['red', 'yellow', 'purple', 'blue']
+            colors = ['#E6194B', '#ECD016', '#911EB4', '#4363D8']
 
             scaling_factor = 0.8  # Apply consistent scaling
 

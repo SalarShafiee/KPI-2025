@@ -23,6 +23,12 @@ if uploaded_file:
         else:
             st.error("The file must contain a sheet named 'Sheet2' or 'Tabelle (2)'.")
             st.stop()
+        # Create a new column with quarter labels
+        num_rows = len(df)
+        quarters = [f"Q{i % 4 + 1} {2025 - (i // 4)}" for i in range(num_rows)]
+        df.insert(0, "Quarter", quarters)  # Insert the column as the first column
+
+
 
         # Make the table editable
         df_editable = st.data_editor(df, num_rows="dynamic")

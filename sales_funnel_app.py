@@ -90,7 +90,7 @@ if uploaded_file:
 
                 # Add stage name inside the shape
                 y_center = (y_top + y_bottom) / 2
-                text_color = "black" if colors[i % len(colors)] == ['yellow','blue','purple'] else "white"
+                text_color = "black" if colors[i % len(colors)] == 'yellow' else "white"
                 ax.text(0.5, y_center, stage, va="center", ha="center", fontsize=12, color=text_color, fontweight="bold")
 
                 # Display "Ist" value annotations
